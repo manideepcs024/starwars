@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 const PlanetCard = ({ planet, onClickMe, showDetails, idtoshowDetails,add }) => {
-    console.log("Planet", planet);
     return (
         <div className={"planet-card " + add}>
             <h1 className="text-center">{planet.name}</h1>

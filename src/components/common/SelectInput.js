@@ -1,7 +1,6 @@
 import React, { PropTypes, props, context } from 'react';
 
 const SelectInput = ({name,error, value, onChange, label, options, defaultOptions }) => {
-    console.log("Options", options);
     let wrapperClass = 'form-group';
     if(error && error.length > 0){
         wrapperClass  += '  has-error'; 

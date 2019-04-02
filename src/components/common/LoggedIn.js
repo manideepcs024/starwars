@@ -16,7 +16,6 @@ class LoggedInPage extends React.Component {
     }
     componentDidMount() {
         let logstatus = utilActions.getLoginStatus();
-        console.log("aaa", logstatus);
         
         if (JSON.parse(logstatus)) {
             this.context.router.push(this.props.currentURL);

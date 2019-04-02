@@ -21,7 +21,6 @@ App.propTypes = {
 };
 
 function mapStateToProps(state, ownProps){
-    console.log("STATES", state);
     return {
         loading: state.ajaxCalls,
         userDetails: state.loginuser

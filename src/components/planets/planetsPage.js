@@ -30,7 +30,6 @@ class PlanetsPage extends React.Component {
     populationReader(population) {
         let populations = population;
 
-        console.log("POP", population);
         // debugger;
         let populationStatus = "lesspopulated";
         if(population==='unknown')
@@ -48,12 +47,10 @@ class PlanetsPage extends React.Component {
         return populationStatus;
     }
     onChange(event) {
-        console.log("Event received here is...", event.target.value);
         this.props.dispatch(planetActions.planetsFetchRequest(event.target.value));
         this.setState({ searchValue: event.target.value });
     }
     onClickMe(planet) {
-        console.log("Planer", planet);
         this.setState({
             showDetails: true,
             idtoshowDetails: planet.name
@@ -72,7 +69,7 @@ class PlanetsPage extends React.Component {
         return (
 
             <div className="jumbotrom">
-                <h1 className="text-center">State of fucking planets will appear over here. </h1>
+                <h1 className="text-center"> Planets. </h1>
                 <TextInput
                     name="seacrhplanet"
                     label="Seacrh Planet"

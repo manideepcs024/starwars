@@ -15,18 +15,7 @@ const Header = ({loading, userDetails}) => {
     }
     return(
         <nav>
-            <IndexLink to="/" activeClassName="active">Home</IndexLink>
-            {"|"}
-            <Link to="/about" activeClassName="active">About</Link>
-            {"|"}
-            <Link to="/course" activeClassName="active">Courses </Link>
-            {"|"}
-            <Link to="/knowme" activeClassName="active">About me</Link>
-            {loading > 0 && <LoaderComponent />}
-            <Link to="/authors" activeClassName="active">Authors</Link>
             {userDetails.loggedIn ? <Link to="/login"> Log out </Link>: ''}
-
-        
         </nav>
 
     );

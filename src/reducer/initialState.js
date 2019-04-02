@@ -1,6 +1,4 @@
 export default {
-    course: [],
-    author: [],
     loginuser: [],
     planets: [],
     planet: [],

@@ -12,23 +12,20 @@ class LoginPage extends React.Component {
         this.state = {
             userDetails: {
                 username: 'Luke',
-                password: '19BBY'
+                password: '19BBY',
+                redirectState: false
             }
         };
         this.onChange = this.onChange.bind(this);
         this.onSave = this.onSave.bind(this);
         this.redirect = this.redirect.bind(this);
-        console.log("Props received", props);
 
     }
     redirect(){
-        console.log("Log in");
     }
     onSave(event) {
         event.preventDefault();
         this.props.dispatch(LoginActions.loginDetailsFetchRequest(this.state.userDetails));
-            //   this.context.router.push('/planets');
-            // this.props.actions.courseActions.saveCOurse(this.state.course, this.props.params.id).then(() => this.redirect());
 
     }
     onChange(event) {
@@ -41,6 +38,7 @@ class LoginPage extends React.Component {
         utilActions.deleteLoginStatus();
     }
     componentDidUpdate(){
+
           const {validUser, loggedIn} = this.props.userDetails;
           if(this.props.userDetails.loggedIn){
               this.context.router.push('/planets');
@@ -66,7 +64,6 @@ class LoginPage extends React.Component {
 }
 
 function mapStateToProps(state, ownProps) {
-    console.log("srare recs", state);
     return {
         userDetails: state.loginuser
     };
