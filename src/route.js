@@ -9,7 +9,7 @@ import LoggedIn from './components/common/LoggedIn';
 
 export default (
         <Route path="/" component={App}>
-                <IndexRoute component={HomePage} />
+                <IndexRoute component={LoggedIn} />
                 <Route path="login" component={LoginPage} />
 
                 <Route component={LoggedIn}>
