@@ -13,8 +13,9 @@ const store = configureStore();
 store.dispatch(loadFilms());
 
 render(
-    <Provider store={store}>
+    <Provider store={store} test={'hello'}>
     <Router history={browserHistory} routes={routes} />
     </Provider>,
     document.getElementById('app')
 );
+//hello test 
