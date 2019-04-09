@@ -13,7 +13,9 @@ class LoaderComponent extends React.Component {
 		return(
 			<div>
 				<div className="loader">
-					<p className="loadingText">{this.state.text}</p>
+				
+
+					<img className="loaderImage" src="https://media1.tenor.com/images/a6a6686cbddb3e99a5f0b60a829effb3/tenor.gif" />
 				</div>
 			</div>
 		);

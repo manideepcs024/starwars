@@ -1,5 +1,6 @@
 import * as URL from '../constants/constantValue';
 import * as actionTypes from '../constants/actionTypes';
+import { beginAJAXcall } from '../actions/ajaxCallActions';
 
 
 export function planetDetailsFetchSuccess(planets) {
@@ -8,12 +9,13 @@ export function planetDetailsFetchSuccess(planets) {
 
 export function planetsFetchRequest(searchFields) {
     return function (dispatch) {
-        let API_URL=URL.API_URL + 'planets';
-if(searchFields){
-API_URL = API_URL + '?search=' + searchFields;
-}else{
-    API_URL = API_URL + '?page=1';
-}
+        dispatch(beginAJAXcall());
+        let API_URL = URL.API_URL + 'planets';
+        if (searchFields) {
+            API_URL = API_URL + '?search=' + searchFields;
+        } else {
+            API_URL = API_URL + '?page=1';
+        }
         fetch(API_URL)
             .then(function (response) {
                 response.json().then(body => {

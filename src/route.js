@@ -6,11 +6,14 @@ import LoginPage from './components/user/loginsPage';
 import PlanetPage from './components/planets/planetsPage';
 import PlanetPageDetails from './components/planets/PlanetPageDetails';
 import LoggedIn from './components/common/LoggedIn';
+import AboutComponent from './components/common/AboutComponent';
+
 
 export default (
         <Route path="/" component={App}>
                 <IndexRoute component={LoggedIn} />
                 <Route path="login" component={LoginPage} />
+                <Route path="about" component={AboutComponent} />
 
                 <Route component={LoggedIn}>
                         <Route path="planets" component={PlanetPage} />

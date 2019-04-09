@@ -11,7 +11,7 @@ class LoginPage extends React.Component {
         super(props, context);
         this.state = {
             userDetails: {
-                username: 'Luke',
+                username: 'Luke Skywalker',
                 password: '19BBY',
                 redirectState: false
             }
