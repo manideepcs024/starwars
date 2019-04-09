@@ -11,8 +11,9 @@ import configureStore from './store/configureStore';
 const store = configureStore();
 
 render(
-    <Provider store={store}>
+    <Provider store={store} test={'hello'}>
     <Router history={browserHistory} routes={routes} />
     </Provider>,
     document.getElementById('app')
 );
+//hello test 
