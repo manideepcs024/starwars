@@ -11,9 +11,8 @@ import {loadFilms} from './actions/filmsActions';
 
 const store = configureStore();
 store.dispatch(loadFilms());
-
 render(
-    <Provider store={store} test={'hello'}>
+    <Provider store={store}>
     <Router history={browserHistory} routes={routes} />
     </Provider>,
     document.getElementById('app')
